@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:behaviors="clr-namespace:Prism.Behaviors;assembly=Prism.Forms" 
+    xmlns:local="clr-namespace:EventToCommandBehavior"
+    xmlns:mybehaviour="clr-namespace:TotalTech.Behaviours" 
+    xmlns:converters="clr-namespace:TotalTech.Converters" 
+    xmlns:i18n="clr-namespace:TotalTech.i18n;assembly=TotalTech" 
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+    xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core" 
+    xmlns:windows="clr-namespace:Xamarin.Forms.PlatformConfiguration.WindowsSpecific;assembly=Xamarin.Forms.Core" 
+    Title="{Binding Title}" 
+    x:Class="TotalTech.Views.StatesPage"
+    BackgroundColor="{StaticResource PrimaryDark}">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:SelectedItemEventArgsToSelectedItemConverter x:Key="SelectedItemConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ListView 
+    ItemsSource="{Binding Items}"
+    SelectedItem="{Binding SelectedItem, Mode=TwoWay}"
+        BackgroundColor="{StaticResource PrimaryDark}">
+  <ListView.Behaviors>
+    <mybehaviour:EventToCommandBehavior EventName="ItemSelected" Command="{Binding ShowMapCommand}"
+                                  Converter="{StaticResource SelectedItemConverter}" />
+  </ListView.Behaviors>
+    <ListView.ItemTemplate>
+      <DataTemplate>
+        <ViewCell>
+          <ViewCell.View>
+            <StackLayout 
+              Padding="20,0,20,0"                       
+              Orientation="Horizontal"       
+              HorizontalOptions="FillAndExpand">
+              <Label Text="{Binding name}"
+                     VerticalTextAlignment="Center"
+                     HorizontalOptions="StartAndExpand" 
+                     TextColor="White"
+                     />
+            </StackLayout>
+          </ViewCell.View>
+        </ViewCell>
+      </DataTemplate>
+     </ListView.ItemTemplate>
+</ListView>
+</ContentPage>
