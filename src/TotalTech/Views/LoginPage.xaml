@@ -12,22 +12,46 @@
     x:Class="TotalTech.Views.LoginPage"
     BackgroundColor="{StaticResource PrimaryDark}">
     <StackLayout 
-        HorizontalOptions="CenterAndExpand" 
-        VerticalOptions="CenterAndExpand">
-        <custom:CustomEntry 
-            Icon="person.png"
-            BorderColor="#5EC1FD"
-            BorderWidth="2"
-            Placeholder="Username" />
-        <custom:CustomEntry 
-            Icon="asterisk.png"
-            BorderColor="#5EC1FD"
-            BorderWidth="2"
-            Placeholder="Password" 
-            IsPassword="true"
-        />
-        <Button 
-            Text="Sign In"
-            Command="{Binding StatesViewCommand}"/>
+         HorizontalOptions="FillAndExpand" 
+        VerticalOptions="CenterAndExpand"
+        Margin="40"
+        Padding="40"
+        >
+            <BoxView HeightRequest="10"/>  
+            <Image HorizontalOptions="Center" HeightRequest="128" WidthRequest="128" Source="AppIcon.png"/>  
+            <Frame BackgroundColor="#BF043055" HasShadow="False"
+            HorizontalOptions="FillAndExpand"   >  
+                <StackLayout Orientation="Vertical" >  
+                    <custom:CustomEntry 
+                    Icon="person.png"
+                    BorderColor="#5EC1FD"
+                    BorderWidth="2"
+                    x:Name="Email" 
+                    Text="{Binding Email}" 
+                    Placeholder="Email"  
+                    PlaceholderColor="White" 
+                    HeightRequest="40"  
+                    Keyboard="Email"  
+                    TextColor="White"/>  
+                    <custom:CustomEntry 
+                    Icon="asterisk.png"
+                    BorderColor="#5EC1FD"
+                    BorderWidth="2"
+                    x:Name="Password" 
+                    Text="{Binding Password}" 
+                    Placeholder="Password"   
+                    PlaceholderColor="White" 
+                    HeightRequest="40"
+                    IsPassword="True"
+                    TextColor="White"/>  
+                </StackLayout>  
+            </Frame>  
+            <Button 
+            Text="Login" TextColor="White"  
+            FontAttributes="Bold" 
+            FontSize="Large" 
+            HorizontalOptions="FillAndExpand"  
+            BackgroundColor="#088da5" 
+            Command="{Binding StatesViewCommand}"/> 
     </StackLayout>
 </ContentPage>

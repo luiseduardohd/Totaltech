@@ -28,7 +28,8 @@
   </ListView.Behaviors>
     <ListView.ItemTemplate>
       <DataTemplate>
-        <ViewCell>
+        <ViewCell 
+            Appearing="Cell_OnAppearing">
           <ViewCell.View>
             <StackLayout 
               Padding="20,0,20,0"                       
