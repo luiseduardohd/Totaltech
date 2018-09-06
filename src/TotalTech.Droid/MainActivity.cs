@@ -11,6 +11,7 @@ using Microsoft.Identity.Client;
 using Xamarin.Forms.Platform.Android;
 using Acr.UserDialogs;
 using Xamarin;
+using Plugin.CurrentActivity;
 
 namespace TotalTech.Droid
 {
@@ -31,6 +32,7 @@ namespace TotalTech.Droid
             global::Xamarin.Forms.Forms.SetFlags("FastRenderers_Experimental");
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             FormsMaps.Init(this,savedInstanceState);
+            CrossCurrentActivity.Current.Init(this, savedInstanceState);
             global::FFImageLoading.Forms.Platform.CachedImageRenderer.Init(enableFastRenderer: true);
             global::FFImageLoading.ImageService.Instance.Initialize(new FFImageLoading.Config.Configuration()
             {

@@ -99,6 +99,7 @@
     <Compile Include="AndroidInitializer.cs" />
     <Compile Include="SplashActivity.cs" />
     <Compile Include="DependencyServices\Hud.cs" />
+    <Compile Include="CustomRenders\CustomEntryRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -140,6 +141,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DependencyServices\" />
+    <Folder Include="CustomRenders\" />
   </ItemGroup>
   <Import Project="$(MobileBuildToolsTargets)" Condition="Exists('$(MobileBuildToolsTargets)')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
