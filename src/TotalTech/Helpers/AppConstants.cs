@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using Xamarin.Forms;
 
 namespace TotalTech.Helpers
 {
@@ -12,8 +13,22 @@ namespace TotalTech.Helpers
             {
                 var docFolder = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
                 var libFolder = Path.Combine(docFolder, "..", "Library");
-                var realmDir  = Path.Combine(libFolder, "temp.realm");
-                return realmDir;
+				var realmFile = "temp.realm";
+                var realmDir  = Path.Combine(libFolder, realmFile);
+				string result;
+                switch (Device.RuntimePlatform)
+                {
+                  case Device.iOS:
+						result = realmDir;
+                        break;
+                  case Device.Android:
+                        result = realmFile;
+						break;
+                  default:
+                        result = realmFile;
+                        break;
+                }
+                return result;
             }
         }
 

@@ -7,7 +7,6 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using TotalTech.Helpers;
-using Microsoft.Identity.Client;
 using Xamarin.Forms.Platform.Android;
 using Acr.UserDialogs;
 using Xamarin;
@@ -45,7 +44,6 @@ namespace TotalTech.Droid
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
         {
             base.OnActivityResult(requestCode, resultCode, data);
-            AuthenticationContinuationHelper.SetAuthenticationContinuationEventArgs(requestCode, resultCode, data);
         }
     }
 }

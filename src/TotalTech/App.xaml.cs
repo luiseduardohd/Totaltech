@@ -9,7 +9,6 @@ using Prism.Ioc;
 using Prism.Plugin.Popups;
 using DryIoc;
 using Prism.DryIoc;
-using Microsoft.Identity.Client;
 using TotalTech.Helpers;
 using Realms;
 using Realms.Sync;

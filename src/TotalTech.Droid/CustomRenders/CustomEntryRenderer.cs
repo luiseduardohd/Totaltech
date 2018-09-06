@@ -3,15 +3,11 @@ using System.IO;
 using Android.Content;
 using Android.Graphics.Drawables;
 using Android.Util;
-using CoreGraphics;
 using Plugin.CurrentActivity;
 using TotalTech.CustomRenders;
 using TotalTech.Droid.CustomRenders;
-using TotalTech.iOS.CustomRenders;
-using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
-using Xamarin.Forms.Platform.iOS;
 
 [assembly: ExportRenderer(typeof(CustomEntry), typeof(CustomEntryRenderer))]
 namespace TotalTech.Droid.CustomRenders

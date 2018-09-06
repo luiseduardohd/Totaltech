@@ -17,8 +17,8 @@
         Margin="40"
         Padding="40"
         >
-            <BoxView HeightRequest="10"/>  
-            <Image HorizontalOptions="Center" HeightRequest="128" WidthRequest="128" Source="AppIcon.png"/>  
+            <Image HorizontalOptions="Center" 
+                   Source="AppIcon.png"/>  
             <Frame BackgroundColor="#BF043055" HasShadow="False"
             HorizontalOptions="FillAndExpand"   >  
                 <StackLayout Orientation="Vertical" >  
