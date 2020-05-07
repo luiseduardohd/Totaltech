@@ -1,7 +1,9 @@
 # Totaltech
 Test project using MVVM , Prism , Realm, Custom Renders and Maps
 
-Practical Exam 1: 1.- Create a .Net Standard Project
+Practical Test 1: 
+
+1.- Create a .Net Standard Project
 
 2.- Use a design pattern (specify it)
 
@@ -18,6 +20,8 @@ Practical Exam 1: 1.- Create a .Net Standard Project
 8.- Use Prism to improve the application
 
 9.- Upload the project to a repository (Github, Bitbucket, other)
+
+Spanish:
 
 Examen Práctico 1:
 
