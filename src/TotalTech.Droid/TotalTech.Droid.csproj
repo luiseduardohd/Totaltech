@@ -20,7 +20,6 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
     <AndroidStoreUncompressedFileExtensions />
     <MandroidI18n />
     <JavaMaximumHeapSize />
@@ -114,6 +113,9 @@
     <AndroidResource Include="Resources\drawable\hamburger.png" />
     <AndroidResource Include="Resources\drawable\launchscreen_icon.png" />
     <AndroidResource Include="Resources\layout\SplashScreen.axml" />
+    <AndroidResource Include="Resources\drawable\AppIcon.png" />
+    <AndroidResource Include="Resources\drawable\asterisk.png" />
+    <AndroidResource Include="Resources\drawable\person.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />

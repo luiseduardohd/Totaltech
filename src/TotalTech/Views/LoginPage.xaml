@@ -8,17 +8,25 @@
     xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core" 
     xmlns:windows="clr-namespace:Xamarin.Forms.PlatformConfiguration.WindowsSpecific;assembly=Xamarin.Forms.Core" 
     xmlns:custom="clr-namespace:TotalTech.CustomRenders;assembly=TotalTech" 
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
     Title="{Binding Title}" 
     x:Class="TotalTech.Views.LoginPage"
     BackgroundColor="{StaticResource PrimaryDark}">
-    <StackLayout 
-         HorizontalOptions="FillAndExpand" 
-        VerticalOptions="CenterAndExpand"
-        Margin="40"
-        Padding="40"
-        >
-            <Image HorizontalOptions="Center" 
-                   Source="AppIcon.png"/>  
+    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+        <ffimageloading:CachedImage
+            HorizontalOptions="Center" 
+            VerticalOptions="Center" 
+            DownsampleToViewSize="true" 
+            Aspect="AspectFill" 
+            HeightRequest="100" 
+            WidthRequest="100">
+            <ffimageloading:CachedImage.Source>
+                <OnPlatform x:TypeArguments="ImageSource">
+                    <On Platform="Android">launchscreen_icon.png</On>
+                    <On Platform="iOS">AppIcon.png</On>
+                </OnPlatform>
+            </ffimageloading:CachedImage.Source>
+        </ffimageloading:CachedImage>
             <Frame BackgroundColor="#BF043055" HasShadow="False"
             HorizontalOptions="FillAndExpand"   >  
                 <StackLayout Orientation="Vertical" >  
@@ -30,7 +38,6 @@
                     Text="{Binding Email}" 
                     Placeholder="Email"  
                     PlaceholderColor="White" 
-                    HeightRequest="40"  
                     Keyboard="Email"  
                     TextColor="White"/>  
                     <custom:CustomEntry 
@@ -40,8 +47,7 @@
                     x:Name="Password" 
                     Text="{Binding Password}" 
                     Placeholder="Password"   
-                    PlaceholderColor="White" 
-                    HeightRequest="40"
+                    PlaceholderColor="White"
                     IsPassword="True"
                     TextColor="White"/>  
                 </StackLayout>  
