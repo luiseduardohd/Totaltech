@@ -1,3 +1,49 @@
+# Totaltech Code Challenge
+
+Test project using MVVM, Prism, Realm, Custom Renders and Maps
+
+Practical test 1:
+
+1.- Create a .Net Standard Project
+
+2.- Use a design pattern (specify it)
+
+3.- Add a welcome screen to the project (iOS and Android) you can use the image of your choice
+
+4.- Create a login window, where the user and password input is a custom render, these inputs must have the following characteristics. Being able to assign the size of the border and its color, in addition to adding an icon. For example, user
+
+5.- Add the BtHudProgress and ANDHud packages to the project, create a dependency service to be able to use them.
+
+6.- It shows a list of the states of the republic and when you click it will show you a new window with a map. If the states are not locally, consume the following link: http://datamx.io/dataset/73b08ca8-e955-4ea5-a206-ee618e26f081/resource/9c5e8302-221c-46f2-b9f7-0a93cbe5365b/download/states.json and save them locally. NOTE: While the request is being made, use the dependency service to show and hide the HUD. If the data already exists on the device, use it.
+
+7.- Show the location of the state on the map by means of a pin.
+
+8.- Use Prism to improve the application
+
+9.- Upload the project to a repository (Github, Bitbucket, other)
+
+Spanish:
+
+Practical Exam 1:
+
+1.- Create a .Net Standard project
+
+2.- Use a design pattern (specify it)
+
+3.- Add a splash screen to the project (iOS and Android) you can use the image of your choice
+
+4.- Create a login window, where the username and password Entry is a custom render, these Entry must have the following characteristics. Being able to assign the size of the border and its color, in addition to adding an icon to it. Ex. User
+
+5.- Add the BtHudProgress and ANDHud packages to the project, create a dependency service to be able to use them.
+
+6.- It shows a list of the states of the republic and when you click it shows you a new window with a map. If the states are not available locally, use the following link: http://datamx.io/dataset/73b08ca8-e955-4ea5-a206-ee618e26f081/resource/9c5e8302-221c-46f2-b9f7-0a93cbe5365b/download/estados.json And save them locally. NOTE: While the request is made use the dependency service to show and hide the hud. If the data already exists on the device, use it.
+
+7.- Shows on the map the location of the state by means of a pin.
+
+8.- Use Prism to improve the application
+
+9.- Upload the project to a repository (Github, Bitbucket, other)
+
 # Totaltech
 Test project using MVVM , Prism , Realm, Custom Renders and Maps
 
